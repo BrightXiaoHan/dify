@@ -104,6 +104,8 @@ class RecommendedAppService:
         :param language: language
         :return:
         """
+        #不从官方获取推荐
+        return {}
         domain = current_app.config.get('HOSTED_FETCH_APP_TEMPLATES_REMOTE_DOMAIN', 'https://tmpl.dify.ai')
         url = f'{domain}/apps?language={language}'
         response = requests.get(url, timeout=(3, 10))
@@ -152,13 +154,14 @@ class RecommendedAppService:
         :param app_id: App ID
         :return:
         """
-        domain = current_app.config.get('HOSTED_FETCH_APP_TEMPLATES_REMOTE_DOMAIN', 'https://tmpl.dify.ai')
-        url = f'{domain}/apps/{app_id}'
-        response = requests.get(url, timeout=(3, 10))
-        if response.status_code != 200:
-            return None
+        # domain = current_app.config.get('HOSTED_FETCH_APP_TEMPLATES_REMOTE_DOMAIN', 'https://tmpl.dify.ai')
+        # url = f'{domain}/apps/{app_id}'
+        # response = requests.get(url, timeout=(3, 10))
+        # if response.status_code != 200:
+        #     return None
 
-        return response.json()
+        # return response.json()
+        return None
 
     @classmethod
     def _fetch_recommended_app_detail_from_db(cls, app_id: str) -> Optional[dict]:

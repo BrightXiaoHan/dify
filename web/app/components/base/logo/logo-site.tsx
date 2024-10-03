@@ -9,11 +9,12 @@ const LogoSite: FC<LogoSiteProps> = ({
   className,
 }) => {
   return (
-    <img
-      src='/logo/logo-site.png'
-      className={classNames('block w-auto h-10', className)}
-      alt='logo'
-    />
+    // <img
+    //   src='/logo/logo-site.png'
+    //   className={classNames('block w-auto h-10', className)}
+    //   alt='logo'
+    // />
+    <h1 style={{ fontFamily: '微软雅黑' }}>政务智能问答机器人</h1>
   )
 }
 

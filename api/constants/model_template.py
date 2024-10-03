@@ -1,5 +1,4 @@
 import json
-
 from models.model import AppMode
 
 default_app_templates = {
@@ -21,8 +20,8 @@ default_app_templates = {
         },
         'model_config': {
             'model': {
-                "provider": "openai",
-                "name": "gpt-4o",
+                "provider": "tongyi",
+                "name": "qwen-max-0403",
                 "mode": "chat",
                 "completion_params": {}
             },
@@ -50,8 +49,8 @@ default_app_templates = {
         },
         'model_config': {
             'model': {
-                "provider": "openai",
-                "name": "gpt-4o",
+                "provider": "tongyi",
+                "name": "qwen-max-0403",
                 "mode": "chat",
                 "completion_params": {}
             }
@@ -76,8 +75,8 @@ default_app_templates = {
         },
         'model_config': {
             'model': {
-                "provider": "openai",
-                "name": "gpt-4o",
+                "provider": "tongyi",
+                "name": "qwen-max-0403",
                 "mode": "chat",
                 "completion_params": {}
             }
