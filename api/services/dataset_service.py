@@ -1224,7 +1224,12 @@ class SegmentService:
             max_position = db.session.query(func.max(DocumentSegment.position)).filter(
                 DocumentSegment.document_id == document.id
             ).scalar()
+            if "segment_id" in args:
+                uid = args["segment_id"]
+            else:
+                uid = str(uuid.uuid4())
             segment_document = DocumentSegment(
+                id=uid,
                 tenant_id=current_user.current_tenant_id,
                 dataset_id=document.dataset_id,
                 document_id=document.id,
@@ -1287,7 +1292,12 @@ class SegmentService:
                     tokens = embedding_model.get_text_embedding_num_tokens(
                         texts=[content]
                     )
+                if "segment_id" in segment_item:
+                    uid = segment_item["segment_id"]
+                else:
+                    uid = str(uuid.uuid4())
                 segment_document = DocumentSegment(
+                    id=uid,
                     tenant_id=current_user.current_tenant_id,
                     dataset_id=document.dataset_id,
                     document_id=document.id,

@@ -68,7 +68,12 @@ def batch_create_segment_to_index_task(job_id: str, content: list, dataset_id: s
             max_position = db.session.query(func.max(DocumentSegment.position)).filter(
                 DocumentSegment.document_id == dataset_document.id
             ).scalar()
+            if "segment_id" in segment:
+                uid = segment["segment_id"]
+            else:
+                uid = str(uuid.uuid4())
             segment_document = DocumentSegment(
+                id=uid,
                 tenant_id=tenant_id,
                 dataset_id=dataset_id,
                 document_id=document_id,
