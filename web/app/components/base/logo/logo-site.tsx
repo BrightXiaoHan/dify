@@ -14,7 +14,7 @@ const LogoSite: FC<LogoSiteProps> = ({
     //   className={classNames('block w-auto h-10', className)}
     //   alt='logo'
     // />
-    <h1 style={{ fontFamily: '微软雅黑' }}>法律知识问答机器人</h1>
+    <h1 style={{ fontFamily: '微软雅黑' }}>法律知识智能体平台</h1>
   )
 }
 
