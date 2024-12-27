@@ -89,7 +89,7 @@ const translation = {
     separatorPlaceholder: '例如换行符（\n）或特定的分隔符（如 "***"）',
     maxLength: '分段最大长度',
     overlap: '分段重叠长度',
-    overlapTip: '设置分段之间的重叠长度可以保留分段之间的政务智能关系，提升召回效果。建议设置为最大分段长度的10%-25%',
+    overlapTip: '设置分段之间的重叠长度可以保留分段之间的法治评估关系，提升召回效果。建议设置为最大分段长度的10%-25%',
     overlapCheck: '分段重叠长度不能大于分段最大长度',
     rules: '文本预处理规则',
     removeExtraSpaces: '替换掉连续的空格、换行符和制表符',

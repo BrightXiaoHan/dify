@@ -8,7 +8,7 @@ const Layout: FC = () => {
   const { t } = useTranslation()
 
   useEffect(() => {
-    document.title = `${t('tools.title')} - 政务智能`
+    document.title = `${t('tools.title')} - 法治评估`
   }, [])
 
   return <ToolProviderList />

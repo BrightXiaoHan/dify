@@ -11,6 +11,6 @@ const Icon = React.forwardRef<React.MutableRefObject<SVGElement>, Omit<IconBaseP
   ref,
 ) => <IconBase {...props} ref={ref} data={data as IconData} />)
 
-Icon.displayName = '政务智能'
+Icon.displayName = '法治评估'
 
 export default Icon

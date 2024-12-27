@@ -45,7 +45,7 @@ const ChatWithHistory: FC<ChatWithHistoryProps> = ({
       if (customConfig)
         document.title = `${site.title}`
       else
-        document.title = `${site.title} - Powered by 政务智能`
+        document.title = `${site.title} - Powered by 法治评估`
     }
   }, [site, customConfig])
 

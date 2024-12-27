@@ -57,7 +57,7 @@ const Datasets = ({
 
   useEffect(() => {
     loadingStateRef.current = isLoading
-    document.title = `${t('dataset.knowledge')} - 政务智能`
+    document.title = `${t('dataset.knowledge')} - 法治评估`
   }, [isLoading])
 
   useEffect(() => {
