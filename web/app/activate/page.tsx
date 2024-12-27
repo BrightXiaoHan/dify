@@ -22,7 +22,7 @@ const Activate = () => {
         <Header />
         <ActivateForm />
         <div className='px-8 py-6 text-sm font-normal text-gray-500'>
-          © {new Date().getFullYear()} 政务智能, Inc. All rights reserved.
+          © {new Date().getFullYear()} 法律知识, Inc. All rights reserved.
         </div>
       </div>
     </div>

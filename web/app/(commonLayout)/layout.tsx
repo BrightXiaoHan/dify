@@ -32,7 +32,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 }
 
 export const metadata = {
-  title: '政务智能',
+  title: '法律知识',
 }
 
 export default Layout

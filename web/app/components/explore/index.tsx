@@ -22,7 +22,7 @@ const Explore: FC<IExploreProps> = ({
   const [installedApps, setInstalledApps] = useState<InstalledApp[]>([])
 
   useEffect(() => {
-    document.title = `${t('explore.title')} -  政务智能`;
+    document.title = `${t('explore.title')} -  法律知识`;
     (async () => {
       const { accounts } = await fetchMembers({ url: '/workspaces/current/members', params: {} })
       if (!accounts)

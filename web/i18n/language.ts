@@ -28,7 +28,7 @@ export const NOTICE_I18N = {
   },
   desc: {
     en_US: 'Our system will be upgrade！',
-    zh_Hans: '为了有效提升数据检索能力及稳定性，政务智能正在升级系统',
+    zh_Hans: '为了有效提升数据检索能力及稳定性，法律知识正在升级系统',
   },
   href: '#',
 }

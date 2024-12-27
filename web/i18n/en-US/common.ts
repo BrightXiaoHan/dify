@@ -157,8 +157,8 @@ const translation = {
     newPassword: '新密码',
     notEqual: '两个密码不相同',
     confirmPassword: '确认密码',
-    langGeniusAccount: '政务智能 账号',
-    langGeniusAccountTip: '您的 政务智能 账号和相关的用户数据。',
+    langGeniusAccount: '法律知识 账号',
+    langGeniusAccountTip: '您的 法律知识 账号和相关的用户数据。',
     editName: '编辑名字',
     showAppLength: '显示 {{length}} 个应用',
     delete: '删除账户',
@@ -187,7 +187,7 @@ const translation = {
     sendInvite: '发送邀请',
     invitedAsRole: '邀请为{{role}}用户',
     invitationSent: '邀请已发送',
-    invitationSentTip: '邀请已发送，对方登录 政务智能 后即可访问你的团队数据。',
+    invitationSentTip: '邀请已发送，对方登录 法律知识 后即可访问你的团队数据。',
     invitationLink: '邀请链接',
     failedinvitationEmails: '邀请以下邮箱失败',
     ok: '好的',
@@ -235,7 +235,7 @@ const translation = {
       openaiHosted: '托管 OpenAI',
       onTrial: '体验',
       exhausted: '超出限额',
-      desc: '托管 OpenAI 由 政务智能 提供的托管 OpenAI 服务，你可以使用 GPT-3.5 等模型，在体验额度消耗完毕前你需要设置其它模型供应商。',
+      desc: '托管 OpenAI 由 法律知识 提供的托管 OpenAI 服务，你可以使用 GPT-3.5 等模型，在体验额度消耗完毕前你需要设置其它模型供应商。',
       callTimes: '调用次数',
       usedUp: '试用额度已用完，请在下方添加自己的模型供应商',
       useYourModel: '当前正在使用你自己的模型供应商。',
@@ -287,7 +287,7 @@ const translation = {
     },
     rerankModel: {
       key: 'Rerank 模型',
-      tip: '重排序模型将根据候选文档列表与用户问题政务智能匹配度进行重新排序，从而改进政务智能排序的结果',
+      tip: '重排序模型将根据候选文档列表与用户问题法律知识匹配度进行重新排序，从而改进法律知识排序的结果',
     },
     quota: '额度',
     searchModel: '搜索模型',
@@ -401,7 +401,7 @@ const translation = {
     },
   },
   apiBasedExtension: {
-    title: 'API 扩展提供了一个集中式的 API 管理，在此统一添加 API 配置后，方便在 政务智能 上的各类应用中直接使用。',
+    title: 'API 扩展提供了一个集中式的 API 管理，在此统一添加 API 配置后，方便在 法律知识 上的各类应用中直接使用。',
     add: '新增 API 扩展',
     selector: {
       title: 'API 扩展',
@@ -430,8 +430,8 @@ const translation = {
   about: {
     changeLog: '更新日志',
     updateNow: '现在更新',
-    nowAvailable: '政务智能 {{version}} 现已可用。',
-    latestAvailable: '政务智能 {{version}} 已是最新版本。',
+    nowAvailable: '法律知识 {{version}} 现已可用。',
+    latestAvailable: '法律知识 {{version}} 已是最新版本。',
   },
   appMenus: {
     overview: '监测',

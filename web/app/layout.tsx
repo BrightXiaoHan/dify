@@ -8,7 +8,7 @@ import './styles/globals.css'
 import './styles/markdown.scss'
 
 export const metadata = {
-  title: '政务智能',
+  title: '法律知识',
 }
 
 export const viewport: Viewport = {
