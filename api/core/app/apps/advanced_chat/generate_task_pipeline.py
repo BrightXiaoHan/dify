@@ -34,6 +34,7 @@ from core.app.entities.task_entities import (
     ChatflowStreamGenerateRoute,
     ErrorStreamResponse,
     MessageEndStreamResponse,
+    MessageStartStreamResponse,
     StreamResponse,
 )
 from core.app.task_pipeline.based_generate_task_pipeline import BasedGenerateTaskPipeline
@@ -189,6 +190,7 @@ class AdvancedChatAppGenerateTaskPipeline(BasedGenerateTaskPipeline, WorkflowCyc
         Process stream response.
         :return:
         """
+        start_flag = True
         for message in self._queue_manager.listen():
             event = message.event
 
@@ -296,6 +298,10 @@ class AdvancedChatAppGenerateTaskPipeline(BasedGenerateTaskPipeline, WorkflowCyc
             elif isinstance(event, QueueAnnotationReplyEvent):
                 self._handle_annotation_reply(event)
             elif isinstance(event, QueueTextChunkEvent):
+                if start_flag:
+                    yield self._message_start_to_stream_response(self._message.id)
+                    start_flag = False
+
                 delta_text = event.text
                 if delta_text is None:
                     continue

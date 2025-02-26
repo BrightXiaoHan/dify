@@ -21,6 +21,7 @@ from core.app.entities.task_entities import (
     MessageFileStreamResponse,
     MessageReplaceStreamResponse,
     MessageStreamResponse,
+    MessageStartStreamResponse,
 )
 from core.llm_generator.llm_generator import LLMGenerator
 from core.tools.tool_file_manager import ToolFileManager
@@ -205,4 +206,19 @@ class MessageCycleManage:
         return MessageReplaceStreamResponse(
             task_id=self._application_generate_entity.task_id,
             answer=answer
+        )
+
+    def _message_start_to_stream_response(self, message_id: str) -> MessageStartStreamResponse:
+        """
+        Message start to stream response.
+        :param message_id: message id
+        :return:
+        """
+        metadata = {}
+        if 'retriever_resources' in self._task_state.metadata:
+            metadata['retriever_resources'] = self._task_state.metadata['retriever_resources']
+        return MessageStartStreamResponse(
+            task_id=self._application_generate_entity.task_id,
+            id=message_id,
+            metadata=metadata
         )

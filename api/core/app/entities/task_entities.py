@@ -84,6 +84,7 @@ class StreamEvent(Enum):
     """
     PING = "ping"
     ERROR = "error"
+    MESSAGE_START = "message_start"
     MESSAGE = "message"
     MESSAGE_END = "message_end"
     MESSAGE_FILE = "message_file"
@@ -135,6 +136,14 @@ class MessageEndStreamResponse(StreamResponse):
     MessageEndStreamResponse entity
     """
     event: StreamEvent = StreamEvent.MESSAGE_END
+    id: str
+    metadata: dict = {}
+
+class MessageStartStreamResponse(StreamResponse):
+    """
+    MessageEndStreamResponse entity
+    """
+    event: StreamEvent = StreamEvent.MESSAGE_START
     id: str
     metadata: dict = {}
 
